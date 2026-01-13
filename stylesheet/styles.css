@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #141414;
+  font-family: 'SF Pro Display';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('fonts/CascadiaCode.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYBOLD.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYHEAVYITALIC.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYLIGHTITALIC.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYMEDIUM.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYREGULAR.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYSEMIBOLDITALIC.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYTHINITALIC.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYULTRALIGHTITALIC.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYBLACKITALIC.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('fonts/Coolvetica Rg.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+.home {
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-family: 'SF Pro Display';
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.home h1 {
+  font-size: 6em;
+}
+
+.home i {
+  margin: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  border-radius: 7.5px;
+  transition: color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.home i:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: #1b1b1b;
+
+}
+
+.home a {
+  color: #141414;
+  box-shadow: white;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background-color 0.2s ease;
+  height: 90px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar:hover {
+  background-color: rgba(10, 10, 10, 0.8);
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Cascadia Code';
+}
+
+.navbar a {
+  color: rgb(187, 187, 187, 0.65);
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  transition: color 0.2s ease;
+}
+
+.navbar:hover a {
+  color: rgb(187, 187, 187);
+}
+
+.navbar a:hover {
+  background-color: #1b1b1b;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.name-highlight {
+  background-image: -webkit-linear-gradient(60deg, #80ffdb, #4ea8de, #5e60ce, #7400b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cursor-glow {
+  height: 200px;
+  width: 200px;
+  border-radius: 40%;
+  background: radial-gradient(circle, rgba(157, 193, 240, 0.15) 0%, rgba(174, 189, 238, 0) 70%);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  pointer-events: none;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.typewriter {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typewriter p {
+  padding-top: 10px;
+  font-size: 1.5em;
+  font-family: 'Cascadia Code', sans-serif;
+  font-weight: 400px;
+  overflow: hidden;
+  border-right: .15em solid #4ea8de;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #4ea8de
+  }
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet Layout (768px and below) */
+@media screen and (max-width: 768px) {
+  .home h1 {
+    font-size: 4em;
+  }
+
+  .home {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .navbar {
+    height: 75px;
+  }
+}
+
+/* Mobile Layout (480px and below) */
+@media screen and (max-width: 480px) {
+  .home h1 {
+    font-size: 2.5em;
+  }
+
+  .typewriter p {
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    /* Slightly tighter for small screens */
+  }
+
+  .navbar {
+    height: 65px;
+  }
+
+  .navbar a {
+    padding: 10px 12px;
+    font-size: 0.85em;
+  }
+
+  .cursor-glow {
+    height: 300px;
+    /* Scale down the ambient light */
+    width: 300px;
+  }
+
+  .home {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
