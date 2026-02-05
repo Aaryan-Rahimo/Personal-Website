@@ -1,0 +1,4 @@
+AuthName "Dialog prompt"
+AuthType Basic
+AuthUserFile /home/rahima33/.htpasswd
+Require valid-user

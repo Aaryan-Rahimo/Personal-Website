@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #141414;
+  color: rgba(255, 255, 255, 0.75);
   font-family: 'SF Pro Display';
 }
 
@@ -9,109 +10,46 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: 'Cascadia Code';
-  src: url('fonts/CascadiaCode.ttf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
+p {
+  font-size: 1.65vw;
 }
 
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYBOLD.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYHEAVYITALIC.otf') format('opentype');
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYLIGHTITALIC.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYMEDIUM.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYREGULAR.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYSEMIBOLDITALIC.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYTHINITALIC.otf') format('opentype');
-  font-weight: 200;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYULTRALIGHTITALIC.otf') format('opentype');
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('fonts/SFPRODISPLAYBLACKITALIC.otf') format('opentype');
-  font-weight: 800;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Coolvetica';
-  src: url('fonts/Coolvetica Rg.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
+h1 {
+  font-size: 4vw;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .home {
-  color: rgba(255, 255, 255, 0.75);
+  box-sizing: border-box;
+  min-height: calc(100vh - 90px);
+  padding: 5.5% 10% 7.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  font-family: 'SF Pro Display';
-  margin: 0;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .home h1 {
-  font-size: 6em;
+  font-size: 8vw;
 }
 
 .home i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   margin: 15px;
-  color: rgba(255, 255, 255, 0.75);
   padding: 10px;
   border-radius: 7.5px;
-  transition: color 0.4s ease;
-  transition: background-color 0.4s ease;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: transparent;
+  transition: color 0.4s ease, background-color 0.4s ease;
 }
 
 .home i:hover {
   color: rgba(255, 255, 255, 1);
   background-color: #1b1b1b;
-
 }
 
 .home a {
@@ -119,11 +57,19 @@ html {
   box-shadow: white;
 }
 
+.home-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: rgba(20, 20, 20, 0.7);
+  background-color: rgba(20, 20, 20, 0.0);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: background-color 0.2s ease;
@@ -174,20 +120,6 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-.cursor-glow {
-  height: 200px;
-  width: 200px;
-  border-radius: 40%;
-  background: radial-gradient(circle, rgba(157, 193, 240, 0.15) 0%, rgba(174, 189, 238, 0) 70%);
-  background-repeat: no-repeat;
-  background-position: center;
-  position: fixed;
-  pointer-events: none;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  will-change: transform;
-}
-
 .typewriter {
   width: fit-content;
   margin-left: auto;
@@ -196,9 +128,9 @@ html {
 
 .typewriter p {
   padding-top: 10px;
-  font-size: 1.5em;
+  padding-bottom: 10px;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-family: 'Cascadia Code', sans-serif;
-  font-weight: 400px;
   overflow: hidden;
   border-right: .15em solid #4ea8de;
   white-space: nowrap;
@@ -207,6 +139,129 @@ html {
   animation:
     typing 3.5s steps(30, end),
     blink-caret .5s step-end infinite;
+}
+
+.aboutme {
+  background-color: rgb(255, 255, 255);
+  font-family: 'SF Pro Display';
+  padding-top: 8.5%;
+  padding-bottom: 8.5%;
+  padding-left: 20%;
+  padding-right: 20%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+}
+
+
+.aboutme img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+
+.aboutme p {
+  margin-right: 20px;
+  color: #141414;
+
+}
+
+.aboutme h1 {
+  color: black
+}
+
+.projects {
+  padding-top: 5.5%;
+  padding-bottom: 7.5%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+.projects h1 {
+  font-size: 4vw;
+  text-align: center;
+}
+
+.projectgallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.card h2 {
+  font-size: 2.5vw;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.card a {
+  color: rgb(187, 187, 187, 0.75);
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  transition: color 0.2s ease;
+  font-size: 1.5vw;
+  background-color: #2c2e33;
+  padding: 10px;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+
+.card a:hover {
+  color: rgb(187, 187, 187);
+  background-color: #32353a;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer {
+  background-color: rgb(14, 14, 14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.footer p {
+  color: #777777;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2vw;
+}
+
+.footer a {
+  color: #356e91;
+}
+
+.footer a:hover {
+  color: #67a2c7;
+}
+
+.genheader h1 {
+  font-size: 200px;
 }
 
 @keyframes typing {
@@ -231,34 +286,12 @@ html {
   }
 }
 
-/* --- Responsive Design --- */
-
-/* Tablet Layout (768px and below) */
-@media screen and (max-width: 768px) {
-  .home h1 {
-    font-size: 4em;
-  }
-
-  .home {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  .navbar {
-    height: 75px;
-  }
-}
-
-/* Mobile Layout (480px and below) */
 @media screen and (max-width: 480px) {
-  .home h1 {
-    font-size: 2.5em;
-  }
-
   .typewriter p {
-    font-size: 1.1em;
-    letter-spacing: 0.05em;
-    /* Slightly tighter for small screens */
+    white-space: normal;
+    border-right: none;
+    animation: none;
+    font-size: 1.2rem;
   }
 
   .navbar {
@@ -270,14 +303,102 @@ html {
     font-size: 0.85em;
   }
 
-  .cursor-glow {
-    height: 300px;
-    /* Scale down the ambient light */
-    width: 300px;
+  .home {
+    padding-top: 30%;
+    padding-bottom: 40%;
   }
 
-  .home {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  .home h1 {
+    font-size: 5em;
   }
+
+  .home p {
+    font-size: 1.3em;
+  }
+
+  .aboutme {
+    padding-top: 50px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutme img {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    margin-top: 5%
+  }
+
+  .babypic {
+    margin: 0px;
+  }
+
+  .aboutme h1 {
+    font-size: 10vw;
+  }
+
+  .aboutme p {
+    font-size: 1em;
+  }
+
+  .projects {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .projects h1 {
+    font-size: 10vw;
+    text-align: center;
+  }
+
+  .projects h2 {
+    font-size: 5vw;
+  }
+
+  .projects p {
+    font-size: 1em;
+  }
+
+  .projects a {
+    font-size: 1em;
+  }
+
+  .projectgallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@font-face {
+  font-family: 'Cascadia Code';
+  src: url('fonts/CascadiaCode.ttf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYBOLD.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('fonts/SFPRODISPLAYREGULAR.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }
