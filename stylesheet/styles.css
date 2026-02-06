@@ -3,7 +3,8 @@ body {
   padding: 0;
   background-color: #141414;
   color: rgba(255, 255, 255, 0.75);
-  font-family: 'SF Pro Display';
+  font-family: 'Primeform';
+  font-weight: 500;
 }
 
 html {
@@ -12,6 +13,7 @@ html {
 
 p {
   font-size: 1.65vw;
+  font-weight: 400;
 }
 
 h1 {
@@ -143,7 +145,6 @@ h1 {
 
 .aboutme {
   background-color: rgb(255, 255, 255);
-  font-family: 'SF Pro Display';
   padding-top: 8.5%;
   padding-bottom: 8.5%;
   padding-left: 20%;
@@ -399,6 +400,20 @@ h1 {
 @font-face {
   font-family: 'SF Pro Display';
   src: url('fonts/SFPRODISPLAYREGULAR.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Primeform';
+  src: url('fonts/PrimeformProDemo-Bold.otf') format('opentype');
+  font-weight: 500;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Primeform';
+  src: url('fonts/PrimeformProDemo-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
